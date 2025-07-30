@@ -32,59 +32,31 @@ Tugas ini bertujuan untuk mengubah algoritma penjadwalan proses di xv6 dari Roun
 * Tambahkan `ptest` ke Makefile
 * Jalankan dan Uji
 ---
-
-## ✅ Uji Fungsionalitas
-
-Tuliskan program uji apa saja yang Anda gunakan, misalnya:
-
-* `ptest`: untuk menguji `getpinfo()`
-* `rtest`: untuk menguji `getReadCount()`
-* `cowtest`: untuk menguji fork dengan Copy-on-Write
-* `shmtest`: untuk menguji `shmget()` dan `shmrelease()`
-* `chmodtest`: untuk memastikan file `read-only` tidak bisa ditulis
-* `audit`: untuk melihat isi log system call (jika dijalankan oleh PID 1)
-
----
-
 ## 📷 Hasil Uji
 
-Lampirkan hasil uji berupa screenshot atau output terminal. Contoh:
+
 
 ### 📍 Contoh Output `cowtest`:
 
 ```
-Child sees: Y
-Parent sees: X
+Booting From Hard Disk..xv6...
+cpu1: starting 1
+cpu0: starting 0
+sb: size 1000 nblocks 941 ninodes 200 nlog 30 logstart 2 inodes8
+$ ptest
+Child 1 selesai  
+Child 2 selesai
+parent selesai
+$
+  
 ```
-
-### 📍 Contoh Output `shmtest`:
-
-```
-Child reads: A
-Parent reads: B
-```
-
-### 📍 Contoh Output `chmodtest`:
-
-```
-Write blocked as expected
-```
-
-Jika ada screenshot:
-
-```
-![hasil cowtest](./screenshots/cowtest_output.png)
-```
-
----
 
 ## ⚠️ Kendala yang Dihadapi
 
 Tuliskan kendala (jika ada), misalnya:
 
-* Salah implementasi `page fault` menyebabkan panic
-* Salah memetakan alamat shared memory ke USERTOP
-* Proses biasa bisa akses audit log (belum ada validasi PID)
+* Bingung dalam menaruh perintahnya
+* Adanya tambahan code yang tidak ada di modul
 
 ---
 
