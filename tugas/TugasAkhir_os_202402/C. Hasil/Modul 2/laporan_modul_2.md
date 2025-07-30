@@ -19,13 +19,18 @@ Tugas ini bertujuan untuk mengubah algoritma penjadwalan proses di xv6 dari Roun
 ---
 
 ## 🛠️ Rincian Implementasi
-### Contoh untuk Modul 2:
-
-* Menambahkan dua system call baru di file `sysproc.c` dan `syscall.c`
-* Mengedit `user.h`, `usys.S`, dan `syscall.h` untuk mendaftarkan syscall
-* Menambahkan struktur `struct pinfo` di `proc.h`
-* Menambahkan counter `readcount` di kernel
-* Membuat dua program uji: `ptest.c` dan `rtest.c`
+* Tambahkan `priority` ke `struct proc` di `proc.h`
+* Inisialisasi `priority` saat alokasi proses di `proc.c`
+* Buat syscall `set_priority(int)`
+  a. Tambah nomor `syscall` di `syscall.h`
+  b. Tambah deklarasi di `user.h`
+  c. Tambah entri di `usys.S`
+  d. Registrasikan syscall di `syscall.c` : Tambahkan deklarasi fungsi dan Tambahkan        ke array `syscalls[]`
+  e. Implementasi di `sysproc.c`
+* Modifikasi Fungsi scheduler() di `proc.c`
+* Buat Program Pengujian: `ptest.c`
+* Tambahkan `ptest` ke Makefile
+* Jalankan dan Uji
 ---
 
 ## ✅ Uji Fungsionalitas
