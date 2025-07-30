@@ -42,9 +42,6 @@ Tuliskan program uji apa saja yang Anda gunakan, misalnya:
 ---
 
 ## 📷 Hasil Uji
-
-Lampirkan hasil uji berupa screenshot atau output terminal. Contoh:
-
 ### 📍 Contoh Output :
 
 ```
