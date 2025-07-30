@@ -10,9 +10,6 @@
 ---
 
 ## 📌 Deskripsi Singkat Tugas
-
-Tuliskan deskripsi singkat dari modul yang Anda kerjakan:
-
 * **Modul 1 – System Call dan Instrumentasi Kernel**:
 Tugas ini bertujuan untuk memahami dan memodifikasi kernel xv6 dengan cara menambahkan dua system call baru. System call pertama, `getpinfo()`, digunakan untuk mengambil informasi semua proses aktif dalam sistem (PID, ukuran memori, dan nama). System call kedua, `getreadcount()`, digunakan untuk memantau jumlah total pemanggilan fungsi `read()` sejak sistem dinyalakan. Selain implementasi pada level kernel, tugas ini juga mencakup pembuatan program user-level `(ptest.c dan rtest.c)` untuk menguji fungsionalitas kedua system call tersebut.
 ---
