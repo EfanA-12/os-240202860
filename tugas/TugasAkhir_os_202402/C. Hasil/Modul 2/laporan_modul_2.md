@@ -5,7 +5,8 @@
 **Nama**: `<Efan Aryanto Adli>`
 **NIM**: `<240202860>`
 **Modul yang Dikerjakan**:
-`(Contoh: Modul 1 – System Call dan Instrumentasi Kernel)`
+`(Modul 2 – Penjadwalan CPU Lanjutan (Priority Scheduling Non-Preemptive)
+l)`
 
 ---
 
@@ -13,15 +14,12 @@
 
 Tuliskan deskripsi singkat dari modul yang Anda kerjakan. Misalnya:
 
-* **Modul 1 – System Call dan Instrumentasi Kernel**:
-  Menambahkan dua system call baru, yaitu `getpinfo()` untuk melihat proses yang aktif dan `getReadCount()` untuk menghitung jumlah pemanggilan `read()` sejak boot.
+* **Modul 2 – Penjadwalan CPU Lanjutan (Priority Scheduling Non-Preemptive)**:
+Tugas ini bertujuan untuk mengubah algoritma penjadwalan proses di xv6 dari Round Robin menjadi Non-Preemptive Priority Scheduling. Mahasiswa diminta menambahkan field `priority` pada setiap proses, mengimplementasikan syscall `set_priority(int)` untuk mengatur prioritas, serta memodifikasi fungsi `scheduler()` agar selalu menjalankan proses `RUNNABLE` dengan prioritas tertinggi. Hasil implementasi diuji menggunakan program `ptest.c` untuk memastikan proses dengan prioritas lebih tinggi dijalankan terlebih dahulu.
 ---
 
 ## 🛠️ Rincian Implementasi
-
-Tuliskan secara ringkas namun jelas apa yang Anda lakukan:
-
-### Contoh untuk Modul 1:
+### Contoh untuk Modul 2:
 
 * Menambahkan dua system call baru di file `sysproc.c` dan `syscall.c`
 * Mengedit `user.h`, `usys.S`, dan `syscall.h` untuk mendaftarkan syscall
