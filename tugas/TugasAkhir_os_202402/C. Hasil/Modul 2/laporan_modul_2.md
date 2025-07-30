@@ -36,7 +36,7 @@ Tugas ini bertujuan untuk mengubah algoritma penjadwalan proses di xv6 dari Roun
 
 
 
-### 📍 Contoh Output `cowtest`:
+### 📍 Contoh Output :
 
 ```
 Booting From Hard Disk..xv6...
