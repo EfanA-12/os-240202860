@@ -28,19 +28,6 @@ Tugas ini bertujuan untuk memahami dan memodifikasi kernel xv6 dengan cara menam
 
 ---
 
-## ✅ Uji Fungsionalitas
-
-Tuliskan program uji apa saja yang Anda gunakan, misalnya:
-
-* `ptest`: untuk menguji `getpinfo()`
-* `rtest`: untuk menguji `getReadCount()`
-* `cowtest`: untuk menguji fork dengan Copy-on-Write
-* `shmtest`: untuk menguji `shmget()` dan `shmrelease()`
-* `chmodtest`: untuk memastikan file `read-only` tidak bisa ditulis
-* `audit`: untuk melihat isi log system call (jika dijalankan oleh PID 1)
-
----
-
 ## 📷 Hasil Uji
 ### 📍 Contoh Output :
 
