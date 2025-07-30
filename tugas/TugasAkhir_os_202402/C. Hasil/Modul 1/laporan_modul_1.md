@@ -15,16 +15,17 @@ Tugas ini bertujuan untuk memahami dan memodifikasi kernel xv6 dengan cara menam
 ---
 
 ## 🛠️ Rincian Implementasi
-
-Tuliskan secara ringkas namun jelas apa yang Anda lakukan:
-
 ### Contoh untuk Modul 1:
 
-* Menambahkan dua system call baru di file `sysproc.c` dan `syscall.c`
-* Mengedit `user.h`, `usys.S`, dan `syscall.h` untuk mendaftarkan syscall
-* Menambahkan struktur `struct pinfo` di `proc.h`
-* Menambahkan counter `readcount` di kernel
-* Membuat dua program uji: `ptest.c` dan `rtest.c`
+* Tambahkan Struktur `pinfo` dan Counter `readcount` di `proc.h`dan di `sysproc.c` `(global)`
+* Tambahkan Nomor System Call Baru di `syscall.h` (paling bawah)
+* Registrasikan syscall di `syscall.c` dan Tambah ke array syscall
+* Tambahkan ke User-Level di `user.h` dan di `usys.S`
+* Implementasi Fungsi Kernel di `sysproc.c`
+* Modifikasi `read()` untuk Tambah Counter di `sysfile.c, fungsi `sys_read()`
+* Buat Program Penguji User-Level File: `ptest.c` (untuk `getpinfo`) dan File: `rtest.c` (untuk `getreadcount`) lalu daftarkan ke `makefile`
+* Build dan Jalankan
+
 ---
 
 ## ✅ Uji Fungsionalitas
@@ -44,41 +45,28 @@ Tuliskan program uji apa saja yang Anda gunakan, misalnya:
 
 Lampirkan hasil uji berupa screenshot atau output terminal. Contoh:
 
-### 📍 Contoh Output `cowtest`:
+### 📍 Contoh Output :
 
 ```
-Child sees: Y
-Parent sees: X
+$ ptest
+PID	MEM	NAME
+1	12288	init
+2	16384	sh
+3	12288	ptest
+...
+
+$ rtest
+Read Count Sebelum: 12
+hello
+Read Count Setelah: 13
 ```
 
-### 📍 Contoh Output `shmtest`:
-
-```
-Child reads: A
-Parent reads: B
-```
-
-### 📍 Contoh Output `chmodtest`:
-
-```
-Write blocked as expected
-```
-
-Jika ada screenshot:
-
-```
-![hasil cowtest](./screenshots/cowtest_output.png)
-```
-
----
 
 ## ⚠️ Kendala yang Dihadapi
 
 Tuliskan kendala (jika ada), misalnya:
 
-* Salah implementasi `page fault` menyebabkan panic
-* Salah memetakan alamat shared memory ke USERTOP
-* Proses biasa bisa akses audit log (belum ada validasi PID)
+* salah memposisi Implementasi Fungsi Kernel `sysproc.c`
 
 ---
 
