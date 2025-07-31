@@ -2,75 +2,55 @@
 
 **Mata Kuliah**: Sistem Operasi
 **Semester**: Genap / Tahun Ajaran 2024–2025
-**Nama**: `<Nama Lengkap>`
-**NIM**: `<Nomor Induk Mahasiswa>`
+**Nama**: `<Efan Aryanto Adli>`
+**NIM**: `<240202860>`
 **Modul yang Dikerjakan**:
-`(Contoh: Modul 1 – System Call dan Instrumentasi Kernel)`
+`(Contoh: Modul 5 – Audit dan Keamanan Sistem (xv6-public))`
 
 ---
 
 ## 📌 Deskripsi Singkat Tugas
 
-Tuliskan deskripsi singkat dari modul yang Anda kerjakan. Misalnya:
-
-* **Modul 1 – System Call dan Instrumentasi Kernel**:
-  Menambahkan dua system call baru, yaitu `getpinfo()` untuk melihat proses yang aktif dan `getReadCount()` untuk menghitung jumlah pemanggilan `read()` sejak boot.
+* **Modul 5 – Audit dan Keamanan Sistem (xv6-public)**:
+Tugas ini berfokus pada penguatan aspek keamanan sistem melalui fitur audit log di kernel xv6. Setiap pemanggilan system call akan direkam ke dalam struktur log internal, mencatat informasi seperti PID pemanggil, nomor syscall, dan waktu `(tick)`. Selain itu, ditambahkan system call baru `get_audit_log()` untuk membaca isi log, namun aksesnya dibatasi hanya untuk proses dengan PID 1 (init) demi menjaga keamanan. Tugas ini memperkenalkan konsep logging di level kernel, validasi akses, dan perlindungan data kernel dari proses user.
 ---
 
 ## 🛠️ Rincian Implementasi
 
-Tuliskan secara ringkas namun jelas apa yang Anda lakukan:
-
-### Contoh untuk Modul 1:
-
-* Menambahkan dua system call baru di file `sysproc.c` dan `syscall.c`
-* Mengedit `user.h`, `usys.S`, dan `syscall.h` untuk mendaftarkan syscall
-* Menambahkan struktur `struct pinfo` di `proc.h`
-* Menambahkan counter `readcount` di kernel
-* Membuat dua program uji: `ptest.c` dan `rtest.c`
+* Tambahkan Struktur Audit Log, di `syscall.c` (bagian global paling atas)
+* Catat System Call di `syscall()`,Di fungsi syscall() `(syscall.c)`, setelah
+* Tambahkan System Call `get_audit_log()`
+* a. `syscall.h` – Tambahkan nomor syscall baru
+* b. `user.h` – Tambahkan deklarasi
+* c. `usys.S` – Tambahkan syscall
+* d. `sysproc.c` – Implementasi syscall
+* Program Uji: `audit.c`
+* Tambahkan ke Makefile
+* Build dan Jalankan:
+* make clean
+* make qemu-nox
+* $ audit
+* Access denied or error.
+* a. Edit `init.c`
 ---
 
 ## ✅ Uji Fungsionalitas
 
-Tuliskan program uji apa saja yang Anda gunakan, misalnya:
-
-* `ptest`: untuk menguji `getpinfo()`
-* `rtest`: untuk menguji `getReadCount()`
-* `cowtest`: untuk menguji fork dengan Copy-on-Write
-* `shmtest`: untuk menguji `shmget()` dan `shmrelease()`
-* `chmodtest`: untuk memastikan file `read-only` tidak bisa ditulis
 * `audit`: untuk melihat isi log system call (jika dijalankan oleh PID 1)
 
 ---
 
 ## 📷 Hasil Uji
 
-Lampirkan hasil uji berupa screenshot atau output terminal. Contoh:
-
-### 📍 Contoh Output `cowtest`:
+### 📍 Hasil Output `audit`:
 
 ```
-Child sees: Y
-Parent sees: X
-```
-
-### 📍 Contoh Output `shmtest`:
-
-```
-Child reads: A
-Parent reads: B
-```
-
-### 📍 Contoh Output `chmodtest`:
-
-```
-Write blocked as expected
-```
-
-Jika ada screenshot:
-
-```
-![hasil cowtest](./screenshots/cowtest_output.png)
+$audit
+=== Audit Log ===
+[0] PID=1 SYCALL=7 TICK=1
+[1] PID=1 SYCALL=7 TICK=2
+[2] PID=1 SYCALL=7 TICK=2
+[3] PID=1 SYCALL=7 TICK=3
 ```
 
 ---
@@ -89,8 +69,7 @@ Tuliskan kendala (jika ada), misalnya:
 
 Tuliskan sumber referensi yang Anda gunakan, misalnya:
 
-* Buku xv6 MIT: [https://pdos.csail.mit.edu/6.828/2018/xv6/book-rev11.pdf](https://pdos.csail.mit.edu/6.828/2018/xv6/book-rev11.pdf)
-* Repositori xv6-public: [https://github.com/mit-pdos/xv6-public](https://github.com/mit-pdos/xv6-public)
-* Stack Overflow, GitHub Issues, diskusi praktikum
+* GitHub : https://github.com/Mhmmdfthn/os-NIM240202840/tree/main/Tugas%20Akhir%20/Modul%205
+* ChatGPT
 
 ---
