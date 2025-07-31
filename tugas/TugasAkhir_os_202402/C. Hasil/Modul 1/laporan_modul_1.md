@@ -37,14 +37,15 @@ PID	MEM	NAME
 1	12288	init
 2	16384	sh
 3	12288	ptest
-...
+```
 
+### 📍 Hasil Output Ptest :
+```
 $ rtest
 Read Count Sebelum: 12
 hello
 Read Count Setelah: 13
 ```
-
 
 ## ⚠️ Kendala yang Dihadapi
 
