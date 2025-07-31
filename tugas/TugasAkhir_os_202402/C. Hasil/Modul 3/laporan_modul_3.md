@@ -42,8 +42,6 @@ Tugas ini bertujuan untuk mengembangkan sistem manajemen memori pada xv6 dengan 
 
 ## 📷 Hasil Uji
 
-Lampirkan hasil uji berupa screenshot atau output terminal. Contoh:
-
 ### 📍 Hasil Output `cowtest`:
 
 ```
@@ -72,10 +70,7 @@ Tuliskan kendala (jika ada), misalnya:
 
 ## 📚 Referensi
 
-Tuliskan sumber referensi yang Anda gunakan, misalnya:
-
-* Buku xv6 MIT: [https://pdos.csail.mit.edu/6.828/2018/xv6/book-rev11.pdf](https://pdos.csail.mit.edu/6.828/2018/xv6/book-rev11.pdf)
-* Repositori xv6-public: [https://github.com/mit-pdos/xv6-public](https://github.com/mit-pdos/xv6-public)
-* Stack Overflow, GitHub Issues, diskusi praktikum
+* CahtGPT
+* 
 
 ---
