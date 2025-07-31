@@ -10,24 +10,28 @@
 ---
 
 ## 📌 Deskripsi Singkat Tugas
-
-Tuliskan deskripsi singkat dari modul yang Anda kerjakan. Misalnya:
-
-* **Modul 1 – System Call dan Instrumentasi Kernel**:
-  Menambahkan dua system call baru, yaitu `getpinfo()` untuk melihat proses yang aktif dan `getReadCount()` untuk menghitung jumlah pemanggilan `read()` sejak boot.
+* **Modul 3 – Manajemen Memori Tingkat Lanjut (xv6-public x86)l**:
+Tugas ini bertujuan untuk mengembangkan sistem manajemen memori pada xv6 dengan dua fitur utama: Copy-on-Write (CoW) Fork dan Shared Memory. CoW mengoptimalkan fungsi `fork()` dengan membagi halaman memori secara read-only antar proses anak dan induk, lalu menyalin hanya saat ada penulisan (page fault). Shared memory memungkinkan proses berbagi halaman memori secara eksplisit menggunakan syscall `shmget()` dan `shmrelease()`, lengkap dengan reference count. Kedua fitur ini menuntut pemahaman mendalam tentang page table, page fault handling, dan kontrol akses memori antar proses.
 ---
 
 ## 🛠️ Rincian Implementasi
-
-Tuliskan secara ringkas namun jelas apa yang Anda lakukan:
-
 ### Contoh untuk Modul 1:
 
-* Menambahkan dua system call baru di file `sysproc.c` dan `syscall.c`
-* Mengedit `user.h`, `usys.S`, dan `syscall.h` untuk mendaftarkan syscall
-* Menambahkan struktur `struct pinfo` di `proc.h`
-* Menambahkan counter `readcount` di kernel
-* Membuat dua program uji: `ptest.c` dan `rtest.c`
+* A. Implementasi Copy-on-Write Fork (CoW)
+* Tambah `ref_count[]` dan fungsi `incref/decref` di `vm.c`, bagian global
+* Tambahkan `PTE_COW` di `mmu.h`
+* Modifikasi `copyuvm()` → `cowuvm()` di `vm.c`
+* Ubah `fork()` di `proc.c`, Cari `np->pgdir = copyuvm(...)` → ganti
+* Tangani Page Fault `T_PGFLT` di `trap.c` di dalam `trap()`
+* Program Uji `cowtest.c`
+* Output: Child sees: Y dan Parent sees: X
+* B. Implementasi Shared Memory ala System V
+* Tambah Struktur di `vm.c`
+* Implementasi `shmget()` di `sysproc.c`
+* Implementasi `shmrelease()` di `sysproc.c`
+* Registrasi syscall Di `syscall.h`, di `user.h`, di `usys.S` dan di `syscall.c`
+* Program Uji `shmtest.c`
+* Output: Child reads: A dan Parent reads: B
 ---
 
 ## ✅ Uji Fungsionalitas
