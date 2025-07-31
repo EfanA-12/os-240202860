@@ -28,6 +28,11 @@ Tugas ini bertujuan untuk memahami dan memodifikasi kernel xv6 dengan cara menam
 
 ---
 
+## ✅ Uji Fungsionalitas
+* `ptest`: untuk menguji `getpinfo()`
+* `rtest`: untuk menguji `getReadCount()`
+---
+
 ## 📷 Hasil Uji
 ### 📍 Hasil Output Ptest :
 
