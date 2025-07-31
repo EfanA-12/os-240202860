@@ -53,6 +53,18 @@ $audit
 [3] PID=1 SYCALL=7 TICK=3
 ```
 
+---
+
+## ⚠️ Kendala yang Dihadapi
+
+Tuliskan kendala (jika ada), misalnya:
+
+* Salah implementasi `page fault` menyebabkan panic
+* Salah memetakan alamat shared memory ke USERTOP
+* Proses biasa bisa akses audit log (belum ada validasi PID)
+
+---
+
 ## 📚 Referensi
 
 * GitHub : https://github.com/Mhmmdfthn/os-NIM240202840/tree/main/Tugas%20Akhir%20/Modul%205
