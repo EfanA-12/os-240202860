@@ -39,7 +39,7 @@ PID	MEM	NAME
 3	12288	ptest
 ```
 
-### 📍 Hasil Output Ptest :
+### 📍 Hasil Output rtest :
 ```
 $ rtest
 Read Count Sebelum: 12
