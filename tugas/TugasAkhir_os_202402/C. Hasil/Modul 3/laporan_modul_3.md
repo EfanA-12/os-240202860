@@ -59,6 +59,6 @@ Parent reads: B
 ## 📚 Referensi
 
 * CahtGPT
-* GitHUb : https://github.com/Mhmmdfthn/os-NIM240202840/tree/main/Tugas%20Akhir%20/Modul%203
+* GitHub : https://github.com/Mhmmdfthn/os-NIM240202840/tree/main/Tugas%20Akhir%20/Modul%203
 
 ---
