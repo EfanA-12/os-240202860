@@ -33,8 +33,6 @@ Tugas ini bertujuan untuk mengubah algoritma penjadwalan proses di xv6 dari Roun
 
 ## ✅ Uji Fungsionalitas
 
-Tuliskan program uji apa saja yang Anda gunakan, misalnya:
-
 * `ptest`: untuk menguji `getpinfo()`
 
 ---
