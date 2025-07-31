@@ -32,9 +32,16 @@ Tugas ini bertujuan untuk mengubah algoritma penjadwalan proses di xv6 dari Roun
 * Tambahkan `ptest` ke Makefile
 * Jalankan dan Uji
 ---
+
+## ✅ Uji Fungsionalitas
+
+Tuliskan program uji apa saja yang Anda gunakan, misalnya:
+
+* `ptest`: untuk menguji `getpinfo()`
+
+---
+
 ## 📷 Hasil Uji
-
-
 
 ### 📍 Hasil Output ptest :
 
