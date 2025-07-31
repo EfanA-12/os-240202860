@@ -15,7 +15,6 @@ Tugas ini bertujuan untuk mengembangkan sistem manajemen memori pada xv6 dengan 
 ---
 
 ## 🛠️ Rincian Implementasi
-### Contoh untuk Modul 1:
 
 * A. Implementasi Copy-on-Write Fork (CoW)
 * Tambah `ref_count[]` dan fungsi `incref/decref` di `vm.c`, bagian global
