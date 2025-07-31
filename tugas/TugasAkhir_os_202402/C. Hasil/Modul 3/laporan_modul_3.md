@@ -5,7 +5,7 @@
 **Nama**: `<Efan Aryanto Adli>`
 **NIM**: `<240202860>`
 **Modul yang Dikerjakan**:
-`(Modul 3)`
+`(Modul 3-Manajemen Memori Tingkat Lanjut (xv6-public x86))`
 
 ---
 
