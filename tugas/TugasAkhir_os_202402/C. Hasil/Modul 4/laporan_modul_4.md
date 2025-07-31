@@ -56,16 +56,6 @@ Tugas ini berfokus pada pengembangan subsistem kernel tambahan di xv6. Pertama, 
 Write blocked as expected
 ```
 
----
-
-## ⚠️ Kendala yang Dihadapi
-
-* Salah implementasi `page fault` menyebabkan panic
-* Salah memetakan alamat shared memory ke USERTOP
-* Proses biasa bisa akses audit log (belum ada validasi PID)
-
----
-
 ## 📚 Referensi
 
 * GitHub : https://github.com/Mhmmdfthn/os-NIM240202840/tree/main/Tugas%20Akhir%20/Modul%204
