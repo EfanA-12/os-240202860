@@ -53,9 +53,6 @@ Read Count Setelah: 13
 ```
 
 ## ⚠️ Kendala yang Dihadapi
-
-Tuliskan kendala (jika ada), misalnya:
-
 * salah memposisi Implementasi Fungsi Kernel `sysproc.c`
 
 ---
