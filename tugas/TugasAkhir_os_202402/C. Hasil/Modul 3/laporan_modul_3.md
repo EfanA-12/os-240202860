@@ -36,26 +36,20 @@ Tugas ini bertujuan untuk mengembangkan sistem manajemen memori pada xv6 dengan 
 
 ## ✅ Uji Fungsionalitas
 
-Tuliskan program uji apa saja yang Anda gunakan, misalnya:
-
-* `ptest`: untuk menguji `getpinfo()`
-* `rtest`: untuk menguji `getReadCount()`
 * `cowtest`: untuk menguji fork dengan Copy-on-Write
 * `shmtest`: untuk menguji `shmget()` dan `shmrelease()`
-* `chmodtest`: untuk memastikan file `read-only` tidak bisa ditulis
-* `audit`: untuk melihat isi log system call (jika dijalankan oleh PID 1)
-
 ---
 
 ## 📷 Hasil Uji
 
 Lampirkan hasil uji berupa screenshot atau output terminal. Contoh:
 
-### 📍 Contoh Output `cowtest`:
+### 📍 Hasil Output `cowtest`:
 
 ```
-Child sees: Y
-Parent sees: X
+$cowtest
+child sees: Y
+parent sees: X
 ```
 
 ### 📍 Contoh Output `shmtest`:
@@ -65,19 +59,6 @@ Child reads: A
 Parent reads: B
 ```
 
-### 📍 Contoh Output `chmodtest`:
-
-```
-Write blocked as expected
-```
-
-Jika ada screenshot:
-
-```
-![hasil cowtest](./screenshots/cowtest_output.png)
-```
-
----
 
 ## ⚠️ Kendala yang Dihadapi
 
