@@ -55,12 +55,13 @@ parent sees: X
 Child reads: A
 Parent reads: B
 ```
+---
 ## ⚠️ Kendala yang Dihadapi
 
 1. **Variabel tidak terdeklarasi saat menangani page fault** – variabel `r` tidak dikenali karena tidak dideklarasikan di awal fungsi `trap()`; solusinya dengan menambahkan `struct trapframe *r = myproc()->tf;`.
 2. **Error redeklarasi fungsi atau variabel global** – terjadi ketika `shmtab[]` atau fungsi `walkpgdir()` dan `mappages()` dideklarasikan ulang di `vm.c` secara `static`, padahal sudah ada deklarasi di `defs.h`.
 3. **Fork gagal karena implementasi `cowuvm()` tidak memetakan semua halaman dengan benar** – menyebabkan child process crash.
-
+---
 
 ## 📚 Referensi
 
