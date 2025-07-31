@@ -29,7 +29,7 @@ Tugas ini bertujuan untuk memahami dan memodifikasi kernel xv6 dengan cara menam
 ---
 
 ## 📷 Hasil Uji
-### 📍 Contoh Output :
+### 📍 Hasil Output Ptest :
 
 ```
 $ ptest
