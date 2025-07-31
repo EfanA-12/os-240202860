@@ -11,13 +11,11 @@
 
 ## 📌 Deskripsi Singkat Tugas
 
-* **Modul 1 – System Call dan Instrumentasi Kernel**:
+* **Modul 4 – Subsistem Kernel Alternatif (xv6-public)l**:
 Tugas ini berfokus pada pengembangan subsistem kernel tambahan di xv6. Pertama, Anda mengimplementasikan system call baru `chmod(path, mode)` yang memungkinkan pengaturan mode file (read-only atau read-write) melalui metadata inode. Kedua, Anda membuat pseudo-device `/dev/random` yang menghasilkan data acak melalui driver sederhana, mirip dengan perangkat di sistem UNIX modern. Implementasi ini memperkenalkan konsep kontrol akses file tingkat kernel serta integrasi device driver ke dalam sistem file xv6.
 ---
 
 ## 🛠️ Rincian Implementasi
-
-### Contoh untuk Modul 1:
 
 * Bagian A – System Call `chmod()`
 * Tambahkan Field `mode` ke `struct` inode, File: `fs.h`, cari `struct inode`
