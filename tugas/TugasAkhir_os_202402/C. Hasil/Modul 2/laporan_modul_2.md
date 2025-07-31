@@ -12,8 +12,6 @@ l)`
 
 ## 📌 Deskripsi Singkat Tugas
 
-Tuliskan deskripsi singkat dari modul yang Anda kerjakan. Misalnya:
-
 * **Modul 2 – Penjadwalan CPU Lanjutan (Priority Scheduling Non-Preemptive)**:
 Tugas ini bertujuan untuk mengubah algoritma penjadwalan proses di xv6 dari Round Robin menjadi Non-Preemptive Priority Scheduling. Mahasiswa diminta menambahkan field `priority` pada setiap proses, mengimplementasikan syscall `set_priority(int)` untuk mengatur prioritas, serta memodifikasi fungsi `scheduler()` agar selalu menjalankan proses `RUNNABLE` dengan prioritas tertinggi. Hasil implementasi diuji menggunakan program `ptest.c` untuk memastikan proses dengan prioritas lebih tinggi dijalankan terlebih dahulu.
 ---
