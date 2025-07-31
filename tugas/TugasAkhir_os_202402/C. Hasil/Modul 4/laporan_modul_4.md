@@ -5,7 +5,7 @@
 **Nama**: `<Efan Aryanto Adli>`
 **NIM**: `<240202860>`
 **Modul yang Dikerjakan**:
-`(Contoh: Modul 4 – Subsistem Kernel Alternatif (xv6-public))`
+`(Modul 4 – Subsistem Kernel Alternatif (xv6-public))`
 
 ---
 
