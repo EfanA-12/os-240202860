@@ -66,6 +66,6 @@ Tuliskan kendala (jika ada), misalnya:
 ## 📚 Referensi
 
 * ChatGPT
-* GitHub : https://github.com/MhAmmdfthn/os-NIM240202840/tree/main/Tugas%20Akhir%20/Modul%203
+* GitHub :[ https://github.com/MhAmmdfthn/os-NIM240202840/tree/main/Tugas%20Akhir%20/Modul%203](https://github.com/Mhmmdfthn/os-NIM240202840/tree/main/Tugas%20Akhir%20/Modul%202)
 
 ---
