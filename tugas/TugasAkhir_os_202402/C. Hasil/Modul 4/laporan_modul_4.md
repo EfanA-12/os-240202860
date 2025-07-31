@@ -62,8 +62,6 @@ Write blocked as expected
 
 ## ⚠️ Kendala yang Dihadapi
 
-Tuliskan kendala (jika ada), misalnya:
-
 * Salah implementasi `page fault` menyebabkan panic
 * Salah memetakan alamat shared memory ke USERTOP
 * Proses biasa bisa akses audit log (belum ada validasi PID)
@@ -72,10 +70,7 @@ Tuliskan kendala (jika ada), misalnya:
 
 ## 📚 Referensi
 
-Tuliskan sumber referensi yang Anda gunakan, misalnya:
-
-* Buku xv6 MIT: [https://pdos.csail.mit.edu/6.828/2018/xv6/book-rev11.pdf](https://pdos.csail.mit.edu/6.828/2018/xv6/book-rev11.pdf)
-* Repositori xv6-public: [https://github.com/mit-pdos/xv6-public](https://github.com/mit-pdos/xv6-public)
-* Stack Overflow, GitHub Issues, diskusi praktikum
+* GitHub : https://github.com/Mhmmdfthn/os-NIM240202840/tree/main/Tugas%20Akhir%20/Modul%204
+* ChatGPT
 
 ---
