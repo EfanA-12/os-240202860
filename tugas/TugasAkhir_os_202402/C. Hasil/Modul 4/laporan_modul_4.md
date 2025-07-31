@@ -56,6 +56,16 @@ Tugas ini berfokus pada pengembangan subsistem kernel tambahan di xv6. Pertama, 
 Write blocked as expected
 ```
 
+---
+
+## ⚠️ Kendala yang Dihadapi
+
+* Awalnya menambahkan `mode` ke `struct dinode` menyebabkan `mkfs` gagal (`assert (BSIZE % sizeof(dinode)) == 0`).
+* Salah menulis inisialisasi `devsw[3]` menyebabkan `randomtest` gagal `cannot open /dev/random`.
+* Fungsi `randomread` tidak dipanggil karena `devsw[3]` hanya diisi di `fileinit()`, padahal perlu diinisialisasi global.
+
+---
+
 ## 📚 Referensi
 
 * GitHub : https://github.com/Mhmmdfthn/os-NIM240202840/tree/main/Tugas%20Akhir%20/Modul%204
