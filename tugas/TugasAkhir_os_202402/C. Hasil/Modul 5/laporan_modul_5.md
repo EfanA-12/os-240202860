@@ -5,7 +5,7 @@
 **Nama**: `<Efan Aryanto Adli>`
 **NIM**: `<240202860>`
 **Modul yang Dikerjakan**:
-`(Contoh: Modul 5 – Audit dan Keamanan Sistem (xv6-public))`
+`(Modul 5 – Audit dan Keamanan Sistem (xv6-public))`
 
 ---
 
