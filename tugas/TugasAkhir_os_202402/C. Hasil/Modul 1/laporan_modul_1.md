@@ -34,7 +34,7 @@ Tugas ini bertujuan untuk memahami dan memodifikasi kernel xv6 dengan cara menam
 ---
 
 ## 📷 Hasil Uji
-### 📍 Hasil Output Ptest :
+### 📍 Hasil Output `Ptest` :
 
 ```
 $ ptest
@@ -44,7 +44,7 @@ PID	MEM	NAME
 3	12288	ptest
 ```
 
-### 📍 Hasil Output rtest :
+### 📍 Hasil Output `rtest` :
 ```
 $ rtest
 Read Count Sebelum: 12
@@ -59,10 +59,5 @@ Read Count Setelah: 13
 
 ## 📚 Referensi
 
-Tuliskan sumber referensi yang Anda gunakan, misalnya:
-
-* Buku xv6 MIT: [https://pdos.csail.mit.edu/6.828/2018/xv6/book-rev11.pdf](https://pdos.csail.mit.edu/6.828/2018/xv6/book-rev11.pdf)
-* Repositori xv6-public: [https://github.com/mit-pdos/xv6-public](https://github.com/mit-pdos/xv6-public)
-* Stack Overflow, GitHub Issues, diskusi praktikum
-
+* ChatGPT
 ---
