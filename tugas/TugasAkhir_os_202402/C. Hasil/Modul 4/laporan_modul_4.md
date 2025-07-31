@@ -2,75 +2,60 @@
 
 **Mata Kuliah**: Sistem Operasi
 **Semester**: Genap / Tahun Ajaran 2024–2025
-**Nama**: `<Nama Lengkap>`
-**NIM**: `<Nomor Induk Mahasiswa>`
+**Nama**: `<Efan Aryanto Adli>`
+**NIM**: `<240202860>`
 **Modul yang Dikerjakan**:
-`(Contoh: Modul 1 – System Call dan Instrumentasi Kernel)`
+`(Contoh: Modul 4 – Subsistem Kernel Alternatif (xv6-public))`
 
 ---
 
 ## 📌 Deskripsi Singkat Tugas
 
-Tuliskan deskripsi singkat dari modul yang Anda kerjakan. Misalnya:
-
 * **Modul 1 – System Call dan Instrumentasi Kernel**:
-  Menambahkan dua system call baru, yaitu `getpinfo()` untuk melihat proses yang aktif dan `getReadCount()` untuk menghitung jumlah pemanggilan `read()` sejak boot.
+Tugas ini berfokus pada pengembangan subsistem kernel tambahan di xv6. Pertama, Anda mengimplementasikan system call baru `chmod(path, mode)` yang memungkinkan pengaturan mode file (read-only atau read-write) melalui metadata inode. Kedua, Anda membuat pseudo-device `/dev/random` yang menghasilkan data acak melalui driver sederhana, mirip dengan perangkat di sistem UNIX modern. Implementasi ini memperkenalkan konsep kontrol akses file tingkat kernel serta integrasi device driver ke dalam sistem file xv6.
 ---
 
 ## 🛠️ Rincian Implementasi
 
-Tuliskan secara ringkas namun jelas apa yang Anda lakukan:
-
 ### Contoh untuk Modul 1:
 
-* Menambahkan dua system call baru di file `sysproc.c` dan `syscall.c`
-* Mengedit `user.h`, `usys.S`, dan `syscall.h` untuk mendaftarkan syscall
-* Menambahkan struktur `struct pinfo` di `proc.h`
-* Menambahkan counter `readcount` di kernel
-* Membuat dua program uji: `ptest.c` dan `rtest.c`
+* Bagian A – System Call `chmod()`
+* Tambahkan Field `mode` ke `struct` inode, File: `fs.h`, cari `struct inode`
+* Tambahkan syscall `chmod()`:
+* a. `syscall.h` – Tambahkan nomor syscall baru
+* b. `user.h` – Tambahkan deklarasi
+* c. `usys.S` – Tambahkan syscall
+* d. `syscall.c` – Daftarkan syscall
+* e. `sysfile.c` – Tambahkan fungsi `sys_chmod`
+* Cegah `write()` jika mode `read-only`, File: `file.c`, fungsi `filewrite()`
+* Program Uji `chmodtest.c`
+* Bagian B – Device Pseudo `/dev/random`
+* Buat File Baru `random.c`
+* Registrasi Device Driver, File: `file.c`
+* Tambahkan Device Node `/dev/random`
+* Program Uji `randomtest.c`
 ---
 
 ## ✅ Uji Fungsionalitas
 
-Tuliskan program uji apa saja yang Anda gunakan, misalnya:
-
-* `ptest`: untuk menguji `getpinfo()`
-* `rtest`: untuk menguji `getReadCount()`
-* `cowtest`: untuk menguji fork dengan Copy-on-Write
-* `shmtest`: untuk menguji `shmget()` dan `shmrelease()`
+* `randomtest` : Untuk menguji pseudo-device /dev/random yang telah ditambahkan ke xv6.
 * `chmodtest`: untuk memastikan file `read-only` tidak bisa ditulis
-* `audit`: untuk melihat isi log system call (jika dijalankan oleh PID 1)
+
 
 ---
 
 ## 📷 Hasil Uji
 
-Lampirkan hasil uji berupa screenshot atau output terminal. Contoh:
-
-### 📍 Contoh Output `cowtest`:
+### 📍 Hasil Output `randomtest`:
 
 ```
-Child sees: Y
-Parent sees: X
+96 211 202 245 68 231 78 41
 ```
 
-### 📍 Contoh Output `shmtest`:
-
-```
-Child reads: A
-Parent reads: B
-```
-
-### 📍 Contoh Output `chmodtest`:
+### 📍 Hasil Output `chmodtest`:
 
 ```
 Write blocked as expected
-```
-
-Jika ada screenshot:
-
-```
-![hasil cowtest](./screenshots/cowtest_output.png)
 ```
 
 ---
